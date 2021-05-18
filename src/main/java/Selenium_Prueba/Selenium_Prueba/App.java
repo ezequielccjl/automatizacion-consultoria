@@ -42,11 +42,15 @@ public class App
     	WebElement mensaje = driver.findElement(By.cssSelector("span.your-message > textarea"));
     	
     	//Completa inputs
-    	nombre.sendKeys("Ezequiel");
+    	nombre.sendKeys("Ezequiel Cordova Cruz");
     	email.sendKeys("Esto es un error");
     	asunto.sendKeys("Prueba");
     	mensaje.sendKeys("Esta es una prueba para automatizar dentro de la página de Consultoría Global.");
+    	System.out.println("Completa inputs");
     	
-    	
+    	//Clickea en SUBMIT
+    	WebElement submit = driver.findElement(By.cssSelector("p > input.wpcf7-submit"));
+    	submit.click();
+    	System.out.println("Clickea submit");
     }
 }
